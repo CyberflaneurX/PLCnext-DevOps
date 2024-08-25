@@ -22,8 +22,8 @@ jobs:
       - name: Pull Docker image
         run: docker pull ghcr.io/cyberflaneurx/plc-next-ghcr:latest
 
-      - name: Run static code analysis
+      - name: Run Cppcheck
         run: |
           docker run --rm -v $(pwd):/workspace -w /workspace ghcr.io/cyberflaneurx/plc-next-ghcr:latest /bin/bash -c "
-          # Your static code analysis command here
+          cppcheck --enable=all --inconclusive --error-exitcode=1 .
           "
