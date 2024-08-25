@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "plcnext_new_Project",
+            "label": "plcnext_new_project",
             "detail": "Create a new PLCNext PLM project",
             "type": "shell",
             "command": "echo Make a new PLCNext project with name ${input:plcnext_project_name} && cd src/projects && plcncli new project -n ${input:plcnext_project_name} --force && cd ${input:plcnext_project_name} && plcncli set target --add -n AXCF2152 && plcncli generate all && echo Finished making new PLCNext Project",
