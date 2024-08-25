@@ -16,7 +16,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Docker
+      - name: Authenticate Docker with GitHub Container Registry
+        run: echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Pull Docker image
+        run: docker pull ghcr.io/cyberflaneurx/plc-next-ghcr:latest
+
+      - name: Run static code analysis
         run: |
-          docker pull ghcr.io/cyberflaneurx/plc-next-ghcr:latest
           docker run --rm -v $(pwd):/workspace -w /workspace ghcr.io/cyberflaneurx/plc-next-ghcr:latest /bin/bash -c "
+          # Your static code analysis command here
