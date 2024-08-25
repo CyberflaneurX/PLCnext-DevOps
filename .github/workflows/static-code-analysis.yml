@@ -25,6 +25,6 @@ jobs:
       - name: Run Cppcheck
         run: |
           docker run --rm -v $(pwd):/workspace -w /workspace ghcr.io/cyberflaneurx/plc-next-ghcr:latest /bin/bash -c "
-          apt-get update && apt-get install -y cppcheck
+          sudo apt-get update && sudo apt-get install -y cppcheck
           cppcheck --enable=all --inconclusive --error-exitcode=1 .
           "
