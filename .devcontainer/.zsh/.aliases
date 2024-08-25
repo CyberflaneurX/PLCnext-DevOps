@@ -1,0 +1,5 @@
+alias gco='git commit -m'
+alias gch='git checkout'
+alias gph='git push'
+alias gpl='git pull'
+alias czm='cz commit'

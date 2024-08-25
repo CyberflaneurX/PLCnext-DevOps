@@ -1,0 +1,1 @@
+FROM ghcr.io/cyberflaneurx/plc-next-ghcr:latest

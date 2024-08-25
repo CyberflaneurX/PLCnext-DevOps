@@ -1,0 +1,17 @@
+﻿---
+AlignConsecutiveAssignments: "true"
+AlignTrailingComments: "true"
+AlwaysBreakAfterReturnType: TopLevel
+BreakBeforeBraces: Allman
+ColumnLimit: "100"
+IndentWidth: "4"
+KeepEmptyLinesAtTheStartOfBlocks: "false"
+Language: Cpp
+MaxEmptyLinesToKeep: "1"
+NamespaceIndentation: None
+PointerAlignment: Right
+SortIncludes: "true"
+SpaceBeforeParens: ControlStatements
+SpacesInContainerLiterals: "false"
+UseTab: Never
+AlwaysBreakTemplateDeclarations: Yes
