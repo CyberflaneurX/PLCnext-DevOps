@@ -1,0 +1,22 @@
+name: Static Code Analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker
+        run: |
+          docker pull ghcr.io/cyberflaneurx/plc-next-ghcr:latest
+          docker run --rm -v $(pwd):/workspace -w /workspace ghcr.io/cyberflaneurx/plc-next-ghcr:latest /bin/bash -c "
