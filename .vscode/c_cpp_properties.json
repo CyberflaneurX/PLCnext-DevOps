@@ -6,7 +6,7 @@
                 "${workspaceFolder}/**",
                 "/usr/include/**",
                 "/opt/plcnext_axcf2152_sdk_2023/sysroots/cortexa9t2hf-neon-pxc-linux-gnueabi/usr/include/**",
-                "${workspaceFolder}/src/projects/Hello/src/**"
+                "${workspaceFolder}/src/projects/StarterKit/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

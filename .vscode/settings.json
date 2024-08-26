@@ -113,7 +113,6 @@
         "cursor": "cpp",
         "binarystring": "cpp"
     },
-    "cmake.sourceDirectory": "/workspaces/PLCtest/src/projects",
     "better-comments.tags": [
         {
             "tag": "!",
