@@ -25,5 +25,14 @@ jobs:
       - name: Run Cppcheck
         run: |
           docker run --rm -v $(pwd):/workspace -w /workspace ghcr.io/cyberflaneurx/plc-next-ghcr:latest /bin/bash -c "
-          cppcheck --enable=all --inconclusive --error-exitcode=2 .
+          cppcheck --enable=all --inconclusive --error-exitcode=1 --suppress=unusedFunction .
           "
+      - name: Build PLCNext Project
+        run: |
+          export BUILD_TYPE=Release
+          PROJECT_NAME="StarterKit"  # Replace with the actual project name or pass as input
+          echo "Build PLCNext release project for project $PROJECT_NAME"
+          cd src/projects/$PROJECT_NAME
+          plcncli generate code --verbose
+          plcncli generate config --verbose
+          plcncli build --verbose

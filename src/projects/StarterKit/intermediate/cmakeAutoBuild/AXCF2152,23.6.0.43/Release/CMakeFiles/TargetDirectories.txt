@@ -1,0 +1,7 @@
+/workspaces/PLCnext-DevOps/src/projects/StarterKit/intermediate/cmakeAutoBuild/AXCF2152,23.6.0.43/Release/CMakeFiles/install/strip.dir
+/workspaces/PLCnext-DevOps/src/projects/StarterKit/intermediate/cmakeAutoBuild/AXCF2152,23.6.0.43/Release/CMakeFiles/install/local.dir
+/workspaces/PLCnext-DevOps/src/projects/StarterKit/intermediate/cmakeAutoBuild/AXCF2152,23.6.0.43/Release/CMakeFiles/StarterKit.dir
+/workspaces/PLCnext-DevOps/src/projects/StarterKit/intermediate/cmakeAutoBuild/AXCF2152,23.6.0.43/Release/CMakeFiles/rebuild_cache.dir
+/workspaces/PLCnext-DevOps/src/projects/StarterKit/intermediate/cmakeAutoBuild/AXCF2152,23.6.0.43/Release/CMakeFiles/install.dir
+/workspaces/PLCnext-DevOps/src/projects/StarterKit/intermediate/cmakeAutoBuild/AXCF2152,23.6.0.43/Release/CMakeFiles/edit_cache.dir
+/workspaces/PLCnext-DevOps/src/projects/StarterKit/intermediate/cmakeAutoBuild/AXCF2152,23.6.0.43/Release/CMakeFiles/list_install_components.dir

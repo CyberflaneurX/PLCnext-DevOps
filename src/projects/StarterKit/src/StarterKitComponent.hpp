@@ -3,11 +3,11 @@
 #include "Arp/System/Acf/ComponentBase.hpp"
 #include "Arp/System/Acf/IApplication.hpp"
 #include "Arp/Plc/Commons/Esm/ProgramComponentBase.hpp"
-#include "StaterKitComponentProgramProvider.hpp"
+#include "StarterKitComponentProgramProvider.hpp"
 #include "Arp/Plc/Commons/Meta/MetaLibraryBase.hpp"
 #include "Arp/System/Commons/Logging.h"
 
-namespace StaterKit
+namespace StarterKit
 {
 
 using namespace Arp;
@@ -16,13 +16,13 @@ using namespace Arp::Plc::Commons::Esm;
 using namespace Arp::Plc::Commons::Meta;
 
 //#component
-class StaterKitComponent : public ComponentBase, public ProgramComponentBase, private Loggable<StaterKitComponent>
+class StarterKitComponent : public ComponentBase, public ProgramComponentBase, private Loggable<StarterKitComponent>
 {
 public: // typedefs
 
 public: // construction/destruction
-    StaterKitComponent(IApplication& application, const String& name);
-    virtual ~StaterKitComponent() = default;
+    StarterKitComponent(IApplication& application, const String& name);
+    virtual ~StarterKitComponent() = default;
 
 public: // IComponent operations
     void Initialize() override;
@@ -35,14 +35,14 @@ public: // ProgramComponentBase operations
     void RegisterComponentPorts() override;
 
 private: // methods
-    StaterKitComponent(const StaterKitComponent& arg) = delete;
-    StaterKitComponent& operator= (const StaterKitComponent& arg) = delete;
+    StarterKitComponent(const StarterKitComponent& arg) = delete;
+    StarterKitComponent& operator= (const StarterKitComponent& arg) = delete;
 
 public: // static factory operations
     static IComponent::Ptr Create(Arp::System::Acf::IApplication& application, const String& name);
 
 private: // fields
-    StaterKitComponentProgramProvider programProvider;
+    StarterKitComponentProgramProvider programProvider;
 
 public: /* Ports
            =====
@@ -78,9 +78,9 @@ public: /* Ports
         */
 };
 
-inline IComponent::Ptr StaterKitComponent::Create(Arp::System::Acf::IApplication& application, const String& name)
+inline IComponent::Ptr StarterKitComponent::Create(Arp::System::Acf::IApplication& application, const String& name)
 {
-    return IComponent::Ptr(new StaterKitComponent(application, name));
+    return IComponent::Ptr(new StarterKitComponent(application, name));
 }
 
-} // end of namespace StaterKit
+} // end of namespace StarterKit

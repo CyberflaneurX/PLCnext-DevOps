@@ -1,13 +1,13 @@
-#include "StaterKitProgram.hpp"
+#include "StarterKitProgram.hpp"
 #include "Arp/System/Commons/Logging.h"
 #include "Arp/System/Core/ByteConverter.hpp"
 
-namespace StaterKit
+namespace StarterKit
 {
  
-void StaterKitProgram::Execute()
+void StarterKitProgram::Execute()
 {
     //implement program 
 }
 
-} // end of namespace StaterKit
+} // end of namespace StarterKit

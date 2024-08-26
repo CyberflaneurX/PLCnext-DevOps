@@ -2,9 +2,9 @@
 #include "Arp/System/Core/Arp.h"
 #include "Arp/Plc/Commons/Esm/ProgramBase.hpp"
 #include "Arp/System/Commons/Logging.h"
-#include "StaterKitComponent.hpp"
+#include "StarterKitComponent.hpp"
 
-namespace StaterKit
+namespace StarterKit
 {
 
 using namespace Arp;
@@ -12,18 +12,18 @@ using namespace Arp::System::Commons::Diagnostics::Logging;
 using namespace Arp::Plc::Commons::Esm;
 
 //#program
-//#component(StaterKit::StaterKitComponent)
-class StaterKitProgram : public ProgramBase, private Loggable<StaterKitProgram>
+//#component(StarterKit::StarterKitComponent)
+class StarterKitProgram : public ProgramBase, private Loggable<StarterKitProgram>
 {
 public: // typedefs
 
 public: // construction/destruction
-    StaterKitProgram(StaterKit::StaterKitComponent& staterKitComponentArg, const String& name);
-    StaterKitProgram(const StaterKitProgram& arg) = delete;
-    virtual ~StaterKitProgram() = default;
+    StarterKitProgram(StarterKit::StarterKitComponent& starterKitComponentArg, const String& name);
+    StarterKitProgram(const StarterKitProgram& arg) = delete;
+    virtual ~StarterKitProgram() = default;
 
 public: // operators
-    StaterKitProgram&  operator=(const StaterKitProgram& arg) = delete;
+    StarterKitProgram&  operator=(const StarterKitProgram& arg) = delete;
 
 public: // properties
 
@@ -43,16 +43,16 @@ public: /* Ports
         */
 
 private: // fields
-    StaterKit::StaterKitComponent& staterKitComponent;
+    StarterKit::StarterKitComponent& starterKitComponent;
 
 };
 
 ///////////////////////////////////////////////////////////////////////////////
 // inline methods of class ProgramBase
-inline StaterKitProgram::StaterKitProgram(StaterKit::StaterKitComponent& staterKitComponentArg, const String& name)
+inline StarterKitProgram::StarterKitProgram(StarterKit::StarterKitComponent& starterKitComponentArg, const String& name)
 : ProgramBase(name)
-, staterKitComponent(staterKitComponentArg)
+, starterKitComponent(starterKitComponentArg)
 {
 }
 
-} // end of namespace StaterKit
+} // end of namespace StarterKit
