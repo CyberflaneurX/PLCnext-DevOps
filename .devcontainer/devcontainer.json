@@ -32,8 +32,9 @@
         "streetsidesoftware.code-spell-checker",
         "twxs.cmake",
         "aaron-bond.better-comments",
-        "ms-azuretools.vscode-docker",      
-        "dillonkearns.vscode-gtest-adapter" 
+        "ms-azuretools.vscode-docker",
+        "dillonkearns.vscode-gtest-adapter",
+        "GitHub.vscode-pull-request-github"
       ]
     }
   },

@@ -41,6 +41,15 @@
                 "kind": "build"
             },
             "problemMatcher": "$gcc"
+        },
+        {
+            "label": "plcnext_run_cppcheck",
+            "detail": "Run cppcheck on both PLC projects and libs",
+            "type": "shell",
+            "command": "cppcheck --quiet --enable=warning --force --error-exitcode=2 src/projects",
+            "group": {
+                "kind": "build"
+            }
         }
     ],
     "inputs": [
