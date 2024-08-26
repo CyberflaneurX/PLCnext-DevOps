@@ -1,4 +1,4 @@
-name: Static Code Analysis
+name: Static Code Analysis and Build
 
 on:
   push:
@@ -22,17 +22,36 @@ jobs:
       - name: Pull Docker image
         run: docker pull ghcr.io/cyberflaneurx/plc-next-ghcr:latest
 
-      - name: Run Cppcheck
+      - name: Start Docker Container
         run: |
-          docker run --rm -v $(pwd):/workspace -w /workspace ghcr.io/cyberflaneurx/plc-next-ghcr:latest /bin/bash -c "
-          cppcheck --enable=all --inconclusive --error-exitcode=1 --suppress=unusedFunction .
-          "
-      - name: Build PLCNext Project
+          docker run -d --name cppcheck_container -v $(pwd):/code -w /code ghcr.io/cyberflaneurx/plc-next-ghcr:latest sleep infinity
+
+      - name: Run Cppcheck inside Container
         run: |
-          export BUILD_TYPE=Release
-          PROJECT_NAME="StarterKit"  # Replace with the actual project name or pass as input
-          echo "Build PLCNext release project for project $PROJECT_NAME"
-          cd src/projects/$PROJECT_NAME
-          plcncli generate code --verbose
-          plcncli generate config --verbose
-          plcncli build --verbose
+          docker exec -i -w /code --user sun cppcheck_container cppcheck --quiet --enable=warning --force --error-exitcode=2 -i src/projects
+
+      - name: List Directory Contents (Optional, for Debugging)
+        run: |
+          docker exec -i -w /code/src/projects/StarterKit --env BUILD_TYPE=Release --user sun cppcheck_container ls -alh
+
+      - name: Generate PLCNext Code inside Container
+        run: |
+          docker exec -i -w /code/src/projects/StarterKit --env BUILD_TYPE=Release --user sun cppcheck_container plcncli generate code --verbose
+
+      - name: Generate PLCNext Config inside Container
+        run: |
+          docker exec -i -w /code/src/projects/StarterKit --env BUILD_TYPE=Release --user sun cppcheck_container plcncli generate config --verbose
+
+      - name: Build PLCNext Project inside Container
+        run: |
+          docker exec -i -w /code/src/projects/StarterKit --env BUILD_TYPE=Release --user sun cppcheck_container plcncli build --verbose
+
+      - name: Deploy PLCNext Project inside Container
+        run: |
+          docker exec -i -w /code/src/projects/StarterKit --env BUILD_TYPE=Release --user sun cppcheck_container plcncli deploy
+
+      - name: Stop Docker Container
+        run: docker stop cppcheck_container
+
+      - name: Remove Docker Container
+        run: docker rm cppcheck_container
