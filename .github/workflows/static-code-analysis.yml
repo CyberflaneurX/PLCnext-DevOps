@@ -25,5 +25,5 @@ jobs:
       - name: Run Cppcheck
         run: |
           docker run --rm -v $(pwd):/workspace -w /workspace ghcr.io/cyberflaneurx/plc-next-ghcr:latest /bin/bash -c "
-          cppcheck ---enable=warning --force --error-exitcode=2 src/projects .
+          cppcheck --enable=all --inconclusive --error-exitcode=2 .
           "
