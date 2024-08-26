@@ -1,1 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?><ProjectSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.phoenixcontact.com/schema/cliproject"><Target>AXCF2152,2023.6.0 (23.6.0.43)</Target><Version>2.0</Version><Name>StarterKit</Name><GenerateDTArrayNameByType>true</GenerateDTArrayNameByType></ProjectSettings>
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.phoenixcontact.com/schema/cliproject">
+  <Id>18510adc-39cd-4cc3-aee3-cee09181a583</Id>
+  <Version>4.0</Version>
+  <Name>StarterKit</Name>
+  <GenerateDTArrayNameByType>true</GenerateDTArrayNameByType>
+  <GenerateNamespaces>true</GenerateNamespaces>
+  <Target>AXCF2152,2023.0.0 LTS (23.0.0.65)</Target>
+</ProjectSettings>
