@@ -169,5 +169,5 @@
             "italic": false
         }
     ],
-    "C_Cpp.default.compilerPath": "/usr/bin/g++-11"
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc-11"
 }

@@ -4,10 +4,11 @@
 
 namespace StarterKit
 {
- 
-void StarterKitProgram::Execute()
+
+void
+StarterKitProgram::Execute()
 {
-    //implement program 
+    // implement program
 }
 
 } // end of namespace StarterKit

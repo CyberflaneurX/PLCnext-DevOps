@@ -5,13 +5,14 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/include/**",
-                //"/opt/plcnext_axcf2152_sdk_2023/sysroots/cortexa9t2hf-neon-pxc-linux-gnueabi/usr/include/**",
-                "${workspaceFolder}/src/projects/StarterKit/**",
+                "/opt/plcnext_axcf2152_sdk_2023/sysroots/cortexa9t2hf-neon-pxc-linux-gnueabi/usr/include/**",
+                "${workspaceFolder}/src/projects/StarterKit/**"
             ],
             "defines": [],
-            "cStandard": "c11",
-            "cppStandard": "c++11",
-            "intelliSenseMode": "gcc-x64"
+            "compilerPath": "/opt/plcnext_axcf2152_sdk_2023/sysroots/x86_64-pokysdk-linux/usr/bin/arm-pxc-linux-gnueabi/arm-pxc-linux-gnueabi-g++",
+            "cStandard": "c99",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "gcc-arm"
         }
     ],
     "version": 4
