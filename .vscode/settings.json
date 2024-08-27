@@ -169,5 +169,6 @@
             "italic": false
         }
     ],
-    "C_Cpp.default.compilerPath": "/usr/bin/gcc-11"
+    "cmake.ignoreCMakeListsMissing": true,
+    "C_Cpp.default.compilerPath": "/opt/plcnext_axcf2152_sdk_2023/sysroots/x86_64-pokysdk-linux/usr/bin/arm-pxc-linux-gnueabi/arm-pxc-linux-gnueabi-g++"
 }
