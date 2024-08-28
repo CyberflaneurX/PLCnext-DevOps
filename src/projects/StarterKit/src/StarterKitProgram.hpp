@@ -16,6 +16,31 @@ using namespace Arp::Plc::Commons::Esm;
 class StarterKitProgram : public ProgramBase, private Loggable<StarterKitProgram>
 {
   public: // typedefs
+    struct StarterKitCommand
+    {
+        Arp::boolean readAnalog1 = false;
+
+        Arp::boolean setOutput = false;
+    };
+
+    struct analogConfig
+    {
+        Arp::uint32 minRange = 0;
+        Arp::uint32 maxRange = 0;
+    };
+
+    struct StarterKitConfig
+    {
+        Arp::boolean allowOutputs = false;
+        Arp::uint32 minRange      = 0;
+        analogConfig analogInOne;
+    };
+
+    struct StarterKitData
+    {
+        Arp::boolean areOutPutActive = false;
+    };
+
   public: // construction/destruction
     StarterKitProgram(StarterKit::StarterKitComponent &starterKitComponentArg, const String &name);
     StarterKitProgram(const StarterKitProgram &arg) = delete;
@@ -40,192 +65,208 @@ class StarterKitProgram : public ProgramBase, private Loggable<StarterKitProgram
              The name comment defines the name of the port and is optional. Default is the name of
              the field.
           */
-    // Inputs
+          // Inputs
+
+    //#port
+    //#attributes(Input|Opc)
+    //#name(Command)
+    StarterKitCommand command_;
+
+    //#port
+    //#attributes(Input|Opc)
+    //#name(Config)
+    StarterKitConfig config_;
+
+    //#port
+    //#attributes(Output|Opc)
+    //#name(Data)
+    StarterKitData data_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN01)
-    Arp::boolean digitalIn1;
+    Arp::boolean digitalIn1_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN02)
-    Arp::boolean dIN02;
+    Arp::boolean dIN02_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN03)
-    Arp::boolean dIN03;
+    Arp::boolean dIN03_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN04)
-    Arp::boolean dIN04;
+    Arp::boolean dIN04_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN05)
-    Arp::boolean dIN05;
+    Arp::boolean dIN05_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN06)
-    Arp::boolean dIN06;
+    Arp::boolean dIN06_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN07)
-    Arp::boolean dIN07;
+    Arp::boolean dIN07_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN08)
-    Arp::boolean dIN08;
+    Arp::boolean dIN08_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN09)
-    Arp::boolean dIN09;
+    Arp::boolean dIN09_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN10)
-    Arp::boolean dIN10;
+    Arp::boolean dIN10_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN11)
-    Arp::boolean dIN11;
+    Arp::boolean dIN11_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN12)
-    Arp::boolean dIN12;
+    Arp::boolean dIN12_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN13)
-    Arp::boolean dIN13;
+    Arp::boolean dIN13_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN14)
-    Arp::boolean dIN14;
+    Arp::boolean dIN14_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN15)
-    Arp::boolean dIN15;
+    Arp::boolean dIN15_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(DIN16)
-    Arp::boolean dIN16;
+    Arp::boolean dIN16_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(AIN1)
-    Arp::uint32 aiN1;
+    Arp::uint32 aiN1_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(AIN2)
-    Arp::uint32 aiN2;
+    Arp::uint32 aiN2_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(AIN3)
-    Arp::uint32 aiN3;
+    Arp::uint32 aiN3_;
 
     //#port
     //#attributes(Input|Opc)
     //#name(AIN4)
-    Arp::uint32 aiN4;
+    Arp::uint32 aiN4_;
 
     // Outputs
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT01)
-    Arp::boolean dOUT01;
+    Arp::boolean dOUT01_;
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT02)
-    Arp::boolean dOUT02;
+    Arp::boolean dOUT02_;
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT03)
-    Arp::boolean dOUT03;
+    Arp::boolean dOUT03_;
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT04)
-    Arp::boolean dOUT04;
+    Arp::boolean dOUT04_;
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT05)
-    Arp::boolean dOUT05;
+    Arp::boolean dOUT05_;
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT06)
-    Arp::boolean dOUT06;
+    Arp::boolean dOUT06_;
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT07)
-    Arp::boolean dOUT07;
+    Arp::boolean dOUT07_;
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT08)
-    Arp::boolean dOUT08;
+    Arp::boolean dOUT08_;
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT09)
-    Arp::boolean dOUT09;
+    Arp::boolean dOUT09_;
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT10)
-    Arp::boolean dOUT10;
+    Arp::boolean dOUT10_;
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT11)
-    Arp::boolean dOUT11;
+    Arp::boolean dOUT11_;
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT12)
-    Arp::boolean dOUT12;
+    Arp::boolean dOUT12_;
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT13)
-    Arp::boolean dOUT13;
+    Arp::boolean dOUT13_;
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT14)
-    Arp::boolean dOUT14;
+    Arp::boolean dOUT14_;
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT15)
-    Arp::boolean dOUT15;
+    Arp::boolean dOUT15_;
 
     //#port
     //#attributes(Output|Opc)
     //#name(DOUT16)
-    Arp::boolean dOUT16;
+    Arp::boolean dOUT16_;
 
   private: // fields
     StarterKit::StarterKitComponent &starterKitComponent;
+    uint32 convertMillivoltsToRange(uint32 millivolts, uint32 minRange, uint32 maxRange);
 };
 
 ///////////////////////////////////////////////////////////////////////////////
