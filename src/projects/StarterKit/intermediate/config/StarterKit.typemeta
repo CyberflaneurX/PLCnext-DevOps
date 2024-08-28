@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MetaConfigurationDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaVersion="2.0" xmlns="http://www.phoenixcontact.com/schema/metaconfig">
   <Types>
+    <Struct type="StarterKitCommand">
+      <Fields>
+        <Field name="readAnalog1" type="boolean" attributes="" dimensions="" />
+        <Field name="setOutput" type="boolean" attributes="" dimensions="" />
+      </Fields>
+    </Struct>
+    <Struct type="StarterKitConfig">
+      <Fields>
+        <Field name="allowOutputs" type="boolean" attributes="" dimensions="" />
+        <Field name="minRange" type="uint32" attributes="" dimensions="" />
+        <Field name="analogInOne" type="analogConfig" attributes="" dimensions="" />
+      </Fields>
+    </Struct>
+    <Struct type="StarterKitData">
+      <Fields>
+        <Field name="areOutPutActive" type="boolean" attributes="" dimensions="" />
+      </Fields>
+    </Struct>
+    <Struct type="analogConfig">
+      <Fields>
+        <Field name="minRange" type="uint32" attributes="" dimensions="" />
+        <Field name="maxRange" type="uint32" attributes="" dimensions="" />
+      </Fields>
+    </Struct>
   </Types>
 </MetaConfigurationDocument>

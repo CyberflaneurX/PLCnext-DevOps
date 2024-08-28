@@ -2,6 +2,9 @@
 <MetaConfigurationDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" schemaVersion="2.0" xmlns="http://www.phoenixcontact.com/schema/metaconfig">
   <Program type="StarterKitProgram">
     <Ports>
+      <Port name="Command" type="StarterKitCommand" attributes="Input|Opc" dimensions="" />
+      <Port name="Config" type="StarterKitConfig" attributes="Input|Opc" dimensions="" />
+      <Port name="Data" type="StarterKitData" attributes="Output|Opc" dimensions="" />
       <Port name="DIN01" type="boolean" attributes="Input|Opc" dimensions="" />
       <Port name="DIN02" type="boolean" attributes="Input|Opc" dimensions="" />
       <Port name="DIN03" type="boolean" attributes="Input|Opc" dimensions="" />

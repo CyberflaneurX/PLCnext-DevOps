@@ -1,1 +1,37 @@
+NAMESPACE StarterKit.StarterKitProgram
+TYPE
+    StarterKitCommand : STRUCT
+        readAnalog1 : BOOL;
+        setOutput : BOOL;
+    END_STRUCT
+END_TYPE
+END_NAMESPACE
+
+NAMESPACE StarterKit.StarterKitProgram
+TYPE
+    StarterKitConfig : STRUCT
+        allowOutputs : BOOL;
+        minRange : UDINT;
+        analogInOne : StarterKit.StarterKitProgram.analogConfig;
+    END_STRUCT
+END_TYPE
+END_NAMESPACE
+
+NAMESPACE StarterKit.StarterKitProgram
+TYPE
+    StarterKitData : STRUCT
+        areOutPutActive : BOOL;
+    END_STRUCT
+END_TYPE
+END_NAMESPACE
+
+NAMESPACE StarterKit.StarterKitProgram
+TYPE
+    analogConfig : STRUCT
+        minRange : UDINT;
+        maxRange : UDINT;
+    END_STRUCT
+END_TYPE
+END_NAMESPACE
+
 
