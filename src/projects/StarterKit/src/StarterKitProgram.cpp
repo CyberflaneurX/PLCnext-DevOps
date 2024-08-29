@@ -23,7 +23,7 @@ StarterKitProgram::Execute()
 {
     // implement program
 
-    if (config_.allowOutputs && command_.setOutput)
+    if (config_.allowOutputs && command_.setOutput || dIN01_)
     {
         // control two fans for cooling
         dOUT01_ = true;
@@ -37,9 +37,7 @@ StarterKitProgram::Execute()
 
     if (command_.readAnalog1)
     {
-        uint32 analogReading = aiN1_;
-
-        log.Info("Analog one reading: {0}", analogReading);
+        log.Info("Analog one reading: {0}", aiN1_);
 
         const double scaledReading = convertMillivoltsToRange(
             analogReading, config_.analogInOne.minRange, config_.analogInOne.maxRange);

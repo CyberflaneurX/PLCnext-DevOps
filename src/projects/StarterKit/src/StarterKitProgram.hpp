@@ -85,7 +85,7 @@ class StarterKitProgram : public ProgramBase, private Loggable<StarterKitProgram
     //#port
     //#attributes(Input|Opc)
     //#name(DIN01)
-    Arp::boolean digitalIn1_;
+    Arp::boolean dIN01_;
 
     //#port
     //#attributes(Input|Opc)
