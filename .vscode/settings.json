@@ -170,5 +170,5 @@
         }
     ],
     "cmake.ignoreCMakeListsMissing": true,
-    "C_Cpp.default.compilerPath": "/opt/plcnext_axcf2152_sdk_2023/sysroots/x86_64-pokysdk-linux/usr/bin/arm-pxc-linux-gnueabi/arm-pxc-linux-gnueabi-g++"
+    "C_Cpp.default.compilerPath": "/opt/axcf2152-linux_sdk_2024/sysroots/x86_64-pokysdk-linux/usr/bin/arm-pxc-linux-gnueabi/arm-pxc-linux-gnueabi-g++"
 }
