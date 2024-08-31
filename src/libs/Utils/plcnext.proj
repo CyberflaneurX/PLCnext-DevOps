@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Version>4.0</Version>
+  <Target>AXCF2152,2024.0.0 LTS (24.0.0.102)</Target>
   <Type>consumablelibrary</Type>
+  <Version>4.0</Version>
   <Name>Utils</Name>
-  <GenerateDTArrayNameByType>true</GenerateDTArrayNameByType>
-  <GenerateNamespaces>true</GenerateNamespaces>
-  <Target>AXCF2152,2023.0.0 LTS (23.0.0.65)</Target>
 </ProjectSettings>
