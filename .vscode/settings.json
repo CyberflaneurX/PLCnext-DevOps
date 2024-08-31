@@ -1,4 +1,24 @@
 {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    "editor.fontFamily": "'MesloLGS NF',Consolas, 'Courier New', monospace",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.rulers": [
+        100
+    ],
+    "clang-format.executable": "/usr/bin/clang-format-14",
+    "clang-format.style": "file",
+    "clang-format.language.c.enable": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "C_Cpp.files.exclude": {
+        "**/build/**": true,
+    },
+    "terminal.integrated.defaultProfile.linux": "zsh",
     "files.associations": {
         "cctype": "cpp",
         "clocale": "cpp",
@@ -150,6 +170,5 @@
             "italic": false
         }
     ],
-    "cmake.ignoreCMakeListsMissing": true,
-    "C_Cpp.default.compilerPath": "/opt/axcf2152-linux_sdk_2024/sysroots/x86_64-pokysdk-linux/usr/bin/arm-pxc-linux/arm-pxc-linux-g++"
+    "cmake.ignoreCMakeListsMissing": true
 }
