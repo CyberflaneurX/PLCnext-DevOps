@@ -2,7 +2,7 @@
     "configurations": [
         {
             "name": "linux",
-            "compilerPath": "/opt/axcf2152-linux_sdk_2024/sysroots/x86_64-pokysdk-linux/usr/bin/arm-pxc-linux/arm-pxc-linux-g++",
+            "compilerPath": "/opt/axcf2152-linux_sdk_2024/sysroots/x86_64-pokysdk-linux/usr/bin/arm-pxc-linux-gnueabi/arm-pxc-linux-gnueabi-g++",
             "cStandard": "c99",
             "cppStandard": "c++14",
             "intelliSenseMode": "linux-gcc-arm",

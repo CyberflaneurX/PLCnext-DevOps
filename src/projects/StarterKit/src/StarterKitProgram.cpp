@@ -5,7 +5,8 @@
 namespace StarterKit
 {
 uint32_t
-StarterKitProgram::convertMillivoltsToRange(uint32 millivolts, uint32 minRange, uint32 maxRange)
+StarterKitProgram::convertMillivoltsToRange(uint32_t millivolts, uint32_t minRange,
+                                            uint32_t maxRange)
 {
     // Convert millivolts to volts as a floating-point number
     double voltage = static_cast<double>(millivolts) / 1000.0;
@@ -37,14 +38,14 @@ StarterKitProgram::Execute()
 
     if (command_.readAnalog1)
     {
-        uint32 analogReading = aiN1_;
+        uint32_t analogReading = aiN1_;
 
-        // log.Info("Analog one reading: {0}", analogReading);
+        log.Info("Analog one reading: {0}", analogReading);
 
         const double scaledReading = convertMillivoltsToRange(
             analogReading, config_.analogInOne.minRange, config_.analogInOne.maxRange);
 
-        // log.Info("Scaled analog reading {0}", scaledReading);
+        log.Info("Scaled analog reading {0}", scaledReading);
     }
 };
 
