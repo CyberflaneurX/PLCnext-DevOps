@@ -69,6 +69,87 @@
         "cfenv": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "variant": "cpp"
-    }
+        "variant": "cpp",
+        "future": "cpp",
+        "charconv": "cpp",
+        "span": "cpp",
+        "*.ipp": "cpp",
+        "codecvt": "cpp",
+        "coroutine": "cpp",
+        "source_location": "cpp",
+        "slist": "cpp",
+        "valarray": "cpp",
+        "shared_mutex": "cpp",
+        "barrier": "cpp",
+        "latch": "cpp",
+        "ranges": "cpp",
+        "syncstream": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "alignedvector3": "cpp",
+        "scoped_allocator": "cpp",
+        "*.inc": "cpp",
+        "*.in": "cpp",
+        "pqxx": "cpp",
+        "cursor": "cpp",
+        "binarystring": "cpp"
+    },
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "*",
+            "color": "#f730fb",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "#",
+            "color": "#299AA2",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "[",
+            "color": "#FF7F50",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+    ],
+    "cmake.ignoreCMakeListsMissing": true,
+    "C_Cpp.default.compilerPath": "/opt/axcf2152-linux_sdk_2024/sysroots/x86_64-pokysdk-linux/usr/bin/arm-pxc-linux/arm-pxc-linux-g++"
 }
