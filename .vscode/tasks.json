@@ -36,7 +36,7 @@
             "label": "plcnext_gen_build",
             "detail": "Build a PLCNext PLM project",
             "type": "shell",
-            "command": "export BUILD_TYPE=Release && echo Build PLCNext release project for project ${input:project_name} && cd src/projects/${input:project_name} && plcncli generate code --verbose && plcncli generate config --verbose && plcncli build --verbose && plcncli deploy && cp bin/${input:project_name}.pcwlx /home/plc/Windows_PLCNextEngineer_Libraries && echo 'File copied successfully'",
+            "command": "export BUILD_TYPE=Release && echo Build PLCNext release project for project ${input:project_name}  && echo Build PLCNext libs && cd src/libs/Utils && plcncli build &&  cd ../../projects/${input:project_name} && plcncli generate code --verbose && plcncli generate config --verbose && plcncli build --verbose && plcncli deploy && cp bin/${input:project_name}.pcwlx /home/plc/Windows_PLCNextEngineer_Libraries && echo 'File copied successfully'",
             "group": {
                 "kind": "build"
             },
@@ -80,7 +80,7 @@
             "id": "project_name",
             "description": "Name of project for plcnext",
             "default": "Hello",
-            "type": "promptString",
+            "type": "promptString"
         }
     ]
 }

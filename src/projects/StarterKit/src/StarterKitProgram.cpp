@@ -39,8 +39,8 @@ StarterKitProgram::Execute()
     {
         log.Info("Analog one reading: {0}", aiN1_);
 
-        const double scaledReading = convertMillivoltsToRange(
-            analogReading, config_.analogInOne.minRange, config_.analogInOne.maxRange);
+        const double scaledReading = convertMillivoltsToRange(aiN1_, config_.analogInOne.minRange,
+                                                              config_.analogInOne.maxRange);
 
         log.Info("Scaled analog reading {0}", scaledReading);
     }

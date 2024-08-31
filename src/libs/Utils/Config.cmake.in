@@ -1,7 +1,6 @@
-@PACKAGE_INIT @
+@PACKAGE_INIT@
+include( "@PACKAGE_LIB_INSTALL_DIR@/Utils-targets.cmake" )
 
-    include("@PACKAGE_LIB_INSTALL_DIR@/Utils-targets.cmake")
+set_and_check(Utils_INCLUDE_DIR "@PACKAGE_INCLUDE_INSTALL_DIR@")
 
-        set_and_check(Utils_INCLUDE_DIR "@PACKAGE_INCLUDE_INSTALL_DIR@")
-
-            check_required_components(Utils)
+check_required_components(Utils)
