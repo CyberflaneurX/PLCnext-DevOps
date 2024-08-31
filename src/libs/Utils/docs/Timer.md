@@ -11,19 +11,16 @@ Usage
 1. Include the Timer Header
 Ensure that you include the Timer class header in your source file:
 
-cpp
-Copy code
-#include "PlatingTimer.hpp"
 2. Create a Timer Instance
 To create a timer, you need to specify the mode (TON or TOF) and the timeout duration.
 
 cpp
 Copy code
 // Create a TON timer with a 1-second delay
-Plating::Timer tonTimer(Plating::TimerMode::TON, std::chrono::milliseconds(1000));
+Utils::Timer tonTimer(Utils::TimerMode::TON, std::chrono::milliseconds(1000));
 
 // Create a TOF timer with a 1-second delay
-Plating::Timer tofTimer(Plating::TimerMode::TOF, std::chrono::milliseconds(1000));
+Utils::Timer tofTimer(Utils::TimerMode::TOF, std::chrono::milliseconds(1000));
 3. Update the Timer
 Call the update() method in your loop or control logic to process the input signal and get the timer's output.
 
@@ -54,13 +51,13 @@ Here’s a complete example demonstrating how to use the Timer class:
 
 cpp
 Copy code
-#include "PlatingTimer.hpp"
+#include "UtilsTimer.hpp"
 
 int main()
 {
     // Create timers
-    Plating::Timer tonTimer(Plating::TimerMode::TON, std::chrono::milliseconds(1000));
-    Plating::Timer tofTimer(Plating::TimerMode::TOF, std::chrono::milliseconds(1000));
+    Utils::Timer tonTimer(Utils::TimerMode::TON, std::chrono::milliseconds(1000));
+    Utils::Timer tofTimer(Utils::TimerMode::TOF, std::chrono::milliseconds(1000));
 
     bool input = /* your input condition */;
 
