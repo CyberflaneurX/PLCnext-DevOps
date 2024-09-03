@@ -1,6 +1,7 @@
 #include "StarterKitProgram.hpp"
 #include "Arp/System/Commons/Logging.h"
 #include "Arp/System/Core/ByteConverter.hpp"
+#include "Utils/include/Utils/util.hpp"
 
 namespace StarterKit
 {
@@ -43,7 +44,7 @@ StarterKitProgram::Execute()
         const double scaledReading = convertMillivoltsToRange(aiN1_, config_.analogInOne.minRange,
                                                               config_.analogInOne.maxRange);
 
-        // log.Info("Scaled analog reading {0}", scaledReading);
+        log.Info("Scaled analog reading {0}", scaledReading);
     }
 };
 
