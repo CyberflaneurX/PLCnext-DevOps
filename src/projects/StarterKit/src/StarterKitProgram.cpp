@@ -1,7 +1,6 @@
 #include "StarterKitProgram.hpp"
 #include "Arp/System/Commons/Logging.h"
 #include "Arp/System/Core/ByteConverter.hpp"
-#include "Utils/include/Utils/util.hpp"
 
 namespace StarterKit
 {
@@ -24,6 +23,11 @@ void
 StarterKitProgram::Execute()
 {
     // implement program
+
+    bool tonOutput = tonTimer.update(dIN02_);
+
+
+    
 
     if (config_.allowOutputs && command_.setOutput || dIN01_)
     {

@@ -3,6 +3,7 @@
 #include "Arp/System/Commons/Logging.h"
 #include "Arp/System/Core/Arp.h"
 #include "StarterKitComponent.hpp"
+#include "Utils/util.hpp"
 
 namespace StarterKit
 {
@@ -267,6 +268,7 @@ class StarterKitProgram : public ProgramBase, private Loggable<StarterKitProgram
   private: // fields
     StarterKit::StarterKitComponent &starterKitComponent;
     uint32 convertMillivoltsToRange(uint32 millivolts, uint32 minRange, uint32 maxRange);
+    Utils::Timer tonTimer(Utils::TimerMode::TON, std::chrono::milliseconds(3000));
 };
 
 ///////////////////////////////////////////////////////////////////////////////

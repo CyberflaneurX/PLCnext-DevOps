@@ -27,7 +27,10 @@ target_include_directories(${CMAKE_PROJECT_NAME}
 
 list(INSERT CMAKE_MODULE_PATH 0 "${ARP_TOOLCHAIN_CMAKE_MODULE_PATH}")
 
+set (Utils_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../../libs/Utils/bin/AXCF2152_2024.0.0.102/${CMAKE_BUILD_TYPE}/cmake)
+
 #######################################################################################
+
 
 ################# set RPATH to ORIGIN for third party libraries #######################
 # Only by setting this is it possible to use libraries which are not already          #
@@ -58,8 +61,9 @@ target_link_options(${CMAKE_PROJECT_NAME} PRIVATE LINKER:--no-undefined)
 
 find_package(ArpDevice REQUIRED)
 find_package(ArpProgramming REQUIRED)
+find_package(Utils CONFIG REQUIRED)
 
-target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE ArpDevice ArpProgramming)
+target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE ArpDevice ArpProgramming Utils)
 
 #######################################################################################
 
