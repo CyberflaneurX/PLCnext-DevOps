@@ -12,16 +12,17 @@
     "clang-format.executable": "/usr/bin/clang-format-14",
     "clang-format.style": "file",
     "clang-format.language.c.enable": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
     "C_Cpp.files.exclude": {
         "**/build/**": true,
     },
     "terminal.integrated.defaultProfile.linux": "zsh",
     "files.associations": {
-        "array": "cpp",
         "cctype": "cpp",
         "clocale": "cpp",
         "cmath": "cpp",
-        "csignal": "cpp",
         "cstdarg": "cpp",
         "cstddef": "cpp",
         "cstdio": "cpp",
@@ -30,12 +31,15 @@
         "ctime": "cpp",
         "cwchar": "cpp",
         "cwctype": "cpp",
+        "any": "cpp",
+        "array": "cpp",
         "atomic": "cpp",
         "strstream": "cpp",
         "bit": "cpp",
         "*.tcc": "cpp",
         "bitset": "cpp",
         "chrono": "cpp",
+        "cinttypes": "cpp",
         "compare": "cpp",
         "complex": "cpp",
         "concepts": "cpp",
@@ -60,7 +64,6 @@
         "optional": "cpp",
         "random": "cpp",
         "ratio": "cpp",
-        "regex": "cpp",
         "string_view": "cpp",
         "system_error": "cpp",
         "tuple": "cpp",
@@ -84,14 +87,12 @@
         "streambuf": "cpp",
         "thread": "cpp",
         "cfenv": "cpp",
-        "cinttypes": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
         "future": "cpp",
         "charconv": "cpp",
         "span": "cpp",
-        "any": "cpp",
         "*.ipp": "cpp",
         "codecvt": "cpp",
         "coroutine": "cpp",
@@ -169,6 +170,5 @@
             "italic": false
         }
     ],
-    "cmake.ignoreCMakeListsMissing": true,
-    "C_Cpp.default.compilerPath": "/opt/plcnext_axcf2152_sdk_2023/sysroots/x86_64-pokysdk-linux/usr/bin/arm-pxc-linux-gnueabi/arm-pxc-linux-gnueabi-g++"
+    "cmake.ignoreCMakeListsMissing": true
 }

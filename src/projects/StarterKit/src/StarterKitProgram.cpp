@@ -4,8 +4,9 @@
 
 namespace StarterKit
 {
-uint32
-StarterKitProgram::convertMillivoltsToRange(uint32 millivolts, uint32 minRange, uint32 maxRange)
+uint32_t
+StarterKitProgram::convertMillivoltsToRange(uint32_t millivolts, uint32_t minRange,
+                                            uint32_t maxRange)
 {
     // Convert millivolts to volts as a floating-point number
     double voltage = static_cast<double>(millivolts) / 1000.0;
@@ -16,14 +17,16 @@ StarterKitProgram::convertMillivoltsToRange(uint32 millivolts, uint32 minRange, 
 
     // Cast the result to uint32 for return
     return scaled;
-}
+};
 
 void
 StarterKitProgram::Execute()
 {
     // implement program
 
-    if (config_.allowOutputs && command_.setOutput)
+    // bool tonOutput = tonTimer.update(dIN02_);
+
+    if (config_.allowOutputs && command_.setOutput || dIN01_)
     {
         // control two fans for cooling
         dOUT01_ = true;
@@ -37,15 +40,13 @@ StarterKitProgram::Execute()
 
     if (command_.readAnalog1)
     {
-        uint32 analogReading = aiN1_;
+        uint32_t analogReading = aiN1_;
 
-        log.Info("Analog one reading: {0}", analogReading);
-
-        const double scaledReading = convertMillivoltsToRange(
-            analogReading, config_.analogInOne.minRange, config_.analogInOne.maxRange);
+        const double scaledReading = convertMillivoltsToRange(aiN1_, config_.analogInOne.minRange,
+                                                              config_.analogInOne.maxRange);
 
         log.Info("Scaled analog reading {0}", scaledReading);
     }
-}
+};
 
 } // end of namespace StarterKit

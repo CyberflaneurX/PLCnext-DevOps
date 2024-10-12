@@ -1,19 +1,25 @@
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "linux",
+            "compilerPath": "/opt/axcf2152-linux_sdk_2024/sysroots/x86_64-pokysdk-linux/usr/bin/arm-pxc-linux-gnueabi/arm-pxc-linux-gnueabi-g++",
+            "cStandard": "c99",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "linux-gcc-arm",
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/include/**",
-                "/opt/plcnext_axcf2152_sdk_2023/sysroots/cortexa9t2hf-neon-pxc-linux-gnueabi/usr/include/**",
-                "${workspaceFolder}/src/projects/StarterKit/**"
+                "${workspaceFolder}/src/projects/StarterKit/**",
+                "/opt/axcf2152-linux_sdk_2024/sysroots/cortexa9t2hf-neon-pxc-linux-gnueabi/usr/include/**"
             ],
-            "defines": [],
-            "compilerPath": "/opt/plcnext_axcf2152_sdk_2023/sysroots/x86_64-pokysdk-linux/usr/bin/arm-pxc-linux-gnueabi/arm-pxc-linux-gnueabi-g++",
-            "cStandard": "c99",
-            "cppStandard": "c++14",
-            "intelliSenseMode": "gcc-arm",
-            "configurationProvider": "ms-vscode.cpptools"
+            "compilerArgs": [
+                "--sysroot=/opt/axcf2152-linux_sdk_2024/sysroots/cortexa9t2hf-neon-pxc-linux-gnueabi",
+                "-march=armv7-a",
+                "-mthumb",
+                "-mfpu=neon",
+                "-mfloat-abi=hard",
+                "-mcpu=cortex-a9"
+            ]
         }
     ],
     "version": 4

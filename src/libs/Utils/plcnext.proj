@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectSettings xmlns="http://www.phoenixcontact.com/schema/cliproject">
+  <Target>AXCF2152,2024.0.0 LTS (24.0.0.102)</Target>
+  <Type>consumablelibrary</Type>
+  <Version>4.0</Version>
+  <Name>Utils</Name>
+</ProjectSettings>
