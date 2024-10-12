@@ -24,10 +24,7 @@ StarterKitProgram::Execute()
 {
     // implement program
 
-    bool tonOutput = tonTimer.update(dIN02_);
-
-
-    
+    // bool tonOutput = tonTimer.update(dIN02_);
 
     if (config_.allowOutputs && command_.setOutput || dIN01_)
     {

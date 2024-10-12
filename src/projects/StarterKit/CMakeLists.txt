@@ -27,7 +27,7 @@ target_include_directories(${CMAKE_PROJECT_NAME}
 
 list(INSERT CMAKE_MODULE_PATH 0 "${ARP_TOOLCHAIN_CMAKE_MODULE_PATH}")
 
-set (Utils_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../../libs/Utils/bin/AXCF2152_2024.0.0.102/${CMAKE_BUILD_TYPE}/cmake)
+set (Utils_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../libs/Utils/bin/AXCF2152_24.0.0.102/${CMAKE_BUILD_TYPE}/cmake)
 
 #######################################################################################
 
